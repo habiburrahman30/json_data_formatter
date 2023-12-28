@@ -3,7 +3,7 @@
 
 This document is Flutter List to Map and Map to List 🥰.
 
-## convert json to list
+## Convert json to list
 
 ```bash
 final data = res.data['data']
@@ -11,11 +11,11 @@ final data = res.data['data']
             .toList()
             .cast<Post>() as List<Post>;
 ```
-## convert json to map
+## Convert json to map
 ```bash
 final data = Post.fromJson(res.data['data']);
 ```
-## convert list to map
+## Convert list to map
 ```bash
 final data = services.map((e) => e.toJson()).toList();
 ```
