@@ -3,14 +3,21 @@
 
 This document is Express JS app.js file configuration and many more 🥰.
 
-## Connect to Cluster0
+## convert json to list
 
 ```bash
-mongodb+srv://admin:YrxtAo2RHmVLxaGT@cluster0.wijmb.mongodb.net/contactsDB?retryWrites=true&w=majority
+final data = res.data['data']
+            .map((json) => Post.fromJson(json as Map<String, dynamic>))
+            .toList()
+            .cast<Post>() as List<Post>;
 ```
-## Estucy 
+## convert json to map
 ```bash
-mongodb+srv://weabers_admin:G4lyoyml3outAaxX@bahon.dyxpb.mongodb.net/estucy?authSource=admin&replicaSet=Bahon-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
+final data = Post.fromJson(res.data['data']);
+```
+## convert list to map
+```bash
+final data = services.map((e) => e.toJson()).toList();
 ```
 
 
