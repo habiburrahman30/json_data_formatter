@@ -20,7 +20,7 @@ final data = Post.fromJson(res.data['data']);
 final data = services.map((e) => e.toJson()).toList();
 ```
 
-## List<Uint8List> and DateTime Json Serializable
+## Uint8List and DateTime Json Serializable
 ```
 import 'dart:typed_data';
 
